@@ -53,7 +53,12 @@ export default function header({ topics }) {
             placeholder="Search photos"
           />
         </form>
-        <div className={styles.gitLink}>See the code</div>
+        <a
+          href="https://github.com/JormanGarcia/Unplash-Clone"
+          className={styles.gitLink}
+        >
+          See the code
+        </a>
 
         <div className={styles.menuContainer} onClick={() => setMenu(!menu)}>
           <div></div>
