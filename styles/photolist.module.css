@@ -1,0 +1,20 @@
+.photo_list {
+  margin-top: 50px;
+}
+
+@media (min-width: 700px) {
+  .photo_list {
+    width: 95vw;
+    max-width: 1300px;
+    margin: 100px auto;
+    margin-bottom: 0;
+    columns: 2;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: 900px) {
+  .photo_list {
+    columns: 3;
+  }
+}

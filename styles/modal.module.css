@@ -1,0 +1,70 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.608);
+  z-index: 1000;
+}
+
+.close {
+  color: white;
+  font-size: 28px;
+  padding: 20px 0 0 20px;
+  cursor: pointer;
+}
+.card {
+  background-color: white;
+  width: 100%;
+  padding-bottom: 100px;
+  margin: auto;
+  margin-top: 20px;
+  height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  margin: auto;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+}
+.username img {
+  border-radius: 50%;
+}
+.username a {
+  margin-left: 10px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.download {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #ccc;
+}
+
+.download:hover {
+  color: black;
+  border: 1px solid black;
+}
+
+@media (min-width: 700px) {
+  .card {
+    width: 80vw;
+    overflow-y: auto;
+  }
+  .image {
+    width: 70%;
+    max-width: 500px;
+  }
+}

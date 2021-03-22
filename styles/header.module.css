@@ -1,0 +1,279 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 15px;
+  z-index: 200;
+  background-color: white;
+
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.068);
+}
+
+.navigation {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  grid-template-columns: 20px 1fr 25px;
+  height: 65px;
+
+  width: 100%;
+}
+
+.navigation nav {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 250px;
+  padding: 25px 25px 30px 20px;
+  position: relative;
+  border-radius: 4px;
+  position: absolute;
+  right: 10px;
+  top: 65px;
+  transform-origin: 90% 0%;
+  z-index: 1000;
+
+  transition: 0.1s ease-out;
+}
+
+.navigation nav::after {
+  content: "";
+  background-color: #222;
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  z-index: 99;
+  border-radius: 2px;
+}
+
+.navigation nav a {
+  color: white;
+  margin-bottom: 18px;
+
+  font-size: 15px;
+  transition: 0.1s;
+}
+
+.navigation nav a:hover,
+.navigation nav div img:hover {
+  opacity: 0.7;
+}
+.navigation nav div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.navigation nav div img {
+  width: 17px;
+  margin-right: 20px;
+  cursor: pointer;
+
+  transition: 0.1s;
+}
+
+.gitLink {
+  display: none;
+}
+
+.logo {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+
+  margin: auto;
+  background-size: cover;
+  background-image: url("/Logo.svg");
+}
+
+.form {
+  position: relative;
+}
+
+.form button {
+  position: absolute;
+  top: 3px;
+  bottom: 0;
+  margin: auto;
+  left: 18px;
+  background-color: transparent;
+  border: none;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.form button img {
+  width: 18px;
+}
+
+.form button:hover {
+  opacity: 1;
+}
+
+.form button:focus {
+  outline: none;
+}
+
+.form input {
+  border-radius: 30px;
+  padding: 13px 20px;
+  padding-left: 50px;
+  width: 100%;
+
+  font-size: 14px;
+  transition: background-color 0.1s;
+
+  border: none;
+  background-color: rgb(235, 235, 235);
+}
+
+.form input:focus {
+  outline: none;
+  background-color: white;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 12px 19px;
+
+  padding-left: 49px;
+}
+
+.menuContainer {
+  cursor: pointer;
+}
+
+.menuContainer div {
+  background-color: black;
+  width: 100%;
+  height: 3px;
+}
+
+.center {
+  margin: 4px 0;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 13px;
+}
+
+.categoriesLeft {
+  padding: 5px 0;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 2px solid rgb(200, 200, 200);
+}
+
+.categoriesLeft a {
+  transition: 0.1s;
+}
+
+.categoriesRight {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.previous,
+.next {
+  width: 15px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 80;
+}
+
+.next {
+  margin: auto;
+  right: 30px;
+  transform: rotate(180deg);
+}
+
+.scroll {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  transition: 0.2s linear;
+  width: 100%;
+}
+
+.scroll a {
+  margin-right: 25px;
+  white-space: nowrap;
+  transition: 0.1s;
+}
+.scroll a,
+.categoriesLeft a {
+  opacity: 0.6;
+}
+
+.scroll a:hover,
+.categoriesLeft a:hover {
+  opacity: 1;
+}
+
+@media (min-width: 600px) {
+  .navigation nav {
+    right: 25px;
+  }
+  .navigation {
+    grid-template-columns: 110px 1fr 25px;
+    gap: 30px;
+  }
+  .logo {
+    background-image: url("/LogoLarge.svg");
+    width: 100%;
+  }
+
+  .categories {
+    font-size: 16px;
+  }
+
+  .categoriesLeft {
+    margin-right: 15px;
+    padding-right: 15px;
+  }
+
+  .scroll a {
+    margin-right: 40px;
+  }
+
+  .categoriesRight {
+    overflow-x: hidden;
+
+    margin: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .navigation {
+    grid-template-columns: 110px 1fr 140px 25px;
+  }
+
+  .gitLink {
+    display: block;
+    text-align: center;
+    border-radius: 50px;
+    padding: 12px 10px;
+    cursor: pointer;
+    font-weight: 600;
+
+    font-size: 15px;
+    color: #111;
+    background-color: rgb(235, 235, 235);
+  }
+
+  .gitLink:hover {
+    opacity: 1;
+    color: #111;
+
+    border: 2px solid rgb(235, 235, 235);
+    background-color: transparent;
+  }
+}
