@@ -124,7 +124,7 @@ export default function header({ topics }) {
           <img
             src="/arrow.png"
             onClick={() =>
-              (document.getElementById("scroll").scrollLeft -= 400)
+              (document.getElementById("scroll").scrollLeft -= 200)
             }
             className={styles.previous}
             style={{
@@ -168,7 +168,7 @@ export default function header({ topics }) {
           <img
             src="/arrow.png"
             onClick={() =>
-              (document.getElementById("scroll").scrollLeft += 400)
+              (document.getElementById("scroll").scrollLeft += 200)
             }
             className={styles.next}
             style={{

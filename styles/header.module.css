@@ -174,7 +174,7 @@
 
 .categoriesRight {
   overflow-y: hidden;
-  overflow-x: hidden;
+  overflow-x: scroll;
   display: flex;
   align-items: center;
   scroll-behavior: smooth;
@@ -216,6 +216,12 @@
 .scroll a:hover,
 .categoriesLeft a:hover {
   opacity: 1;
+}
+
+@media (min-width: 360px) {
+  .categoriesRight {
+    overflow-x: hidden;
+  }
 }
 
 @media (min-width: 600px) {
